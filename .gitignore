@@ -1,2 +1,16 @@
-# Internal content — not for public distribution
+# Internal Caesar Nexus docs — not for public release
+CAESAR-*.md
+CAESAR_*.md
+SKILLS_INTEGRATION_MAP.md
+GEMINI.md
 _internal/
+.vscode/
+
+# Flat root command files — canonical location is commands/
+forge*.md
+ops-*.md
+market-*.md
+nexus-*.md
+spec-*.md
+checkpoint-*.md
+trigger-*.md
