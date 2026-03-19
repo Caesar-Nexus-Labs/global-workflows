@@ -4,14 +4,14 @@
 
 1. Clone this repo:
 ```bash
-git clone https://github.com/Caesar-Nexus-Labs/global-workflows.git
+git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git
 ```
 
 2. Add to your `AGENTS.md`:
 ```markdown
 # Caesar Nexus Workflows
-Available commands: /path/to/global-workflows/commands/
-Triggers: /path/to/global-workflows/triggers/
+Available commands: /path/to/caesar-builder/commands/
+Triggers: /path/to/caesar-builder/triggers/
 Use /forge, /forge-plan, /ops-deploy, etc. as described in each .md file.
 ```
 

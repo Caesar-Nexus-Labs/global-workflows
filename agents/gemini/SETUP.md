@@ -4,14 +4,14 @@
 
 1. Clone this repo:
 ```bash
-git clone https://github.com/Caesar-Nexus-Labs/global-workflows.git
+git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git
 ```
 
 2. Copy or symlink `GEMINI.md` to your project root (Gemini CLI auto-loads it):
 ```bash
-cp /path/to/global-workflows/agents/gemini/GEMINI.md ~/your-project/GEMINI.md
+cp /path/to/caesar-builder/agents/gemini/GEMINI.md ~/your-project/GEMINI.md
 # or symlink:
-ln -s /path/to/global-workflows/agents/gemini/GEMINI.md ~/your-project/GEMINI.md
+ln -s /path/to/caesar-builder/agents/gemini/GEMINI.md ~/your-project/GEMINI.md
 ```
 
 3. Configure triggers in `~/.gemini/settings.json`:
@@ -19,9 +19,9 @@ ln -s /path/to/global-workflows/agents/gemini/GEMINI.md ~/your-project/GEMINI.md
 {
   "autoConfigureMaxOutputTokens": true,
   "triggerSettings": {
-    "sessionStartTrigger": "/path/to/global-workflows/triggers/trigger-session-start.md",
-    "sessionEndTrigger": "/path/to/global-workflows/triggers/trigger-session-end.md",
-    "promptSubmitTrigger": "/path/to/global-workflows/triggers/trigger-prompt-submit.md"
+    "sessionStartTrigger": "/path/to/caesar-builder/triggers/trigger-session-start.md",
+    "sessionEndTrigger": "/path/to/caesar-builder/triggers/trigger-session-end.md",
+    "promptSubmitTrigger": "/path/to/caesar-builder/triggers/trigger-prompt-submit.md"
   }
 }
 ```

@@ -3,7 +3,7 @@
 ## Installation (Internal)
 
 This is the native environment. Workflows are already loaded via:
-- Commands: `C:\Users\admin\.gemini\antigravity\global_workflows\`
+- Commands: `C:\Users\admin\.gemini\antigravity\caesar-builder\`
 - Triggers: bound in `~/.gemini/settings.json`
 - GEMINI.md: auto-loaded at session start
 
@@ -11,8 +11,8 @@ This is the native environment. Workflows are already loaded via:
 
 1. Clone:
 ```bash
-git clone https://github.com/Caesar-Nexus-Labs/global-workflows.git \
-  C:/Users/admin/.gemini/antigravity/global_workflows
+git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git \
+  C:/Users/admin/.gemini/antigravity/caesar-builder
 ```
 
 2. Bind triggers in `~/.gemini/settings.json` (see `agents/gemini/SETUP.md` for format).

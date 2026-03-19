@@ -4,14 +4,14 @@
 
 1. Clone this repo:
 ```bash
-git clone https://github.com/Caesar-Nexus-Labs/global-workflows.git
+git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git
 ```
 
 2. Add to your `CLAUDE.md` (global or project-level):
 ```markdown
 # Slash Commands
-Commands are in: /path/to/global-workflows/commands/
-Triggers are in: /path/to/global-workflows/triggers/
+Commands are in: /path/to/caesar-builder/commands/
+Triggers are in: /path/to/caesar-builder/triggers/
 
 Use /forge, /forge-plan, /ops-deploy, etc. as described in each .md file.
 ```
@@ -20,9 +20,9 @@ Use /forge, /forge-plan, /ops-deploy, etc. as described in each .md file.
 ```json
 {
   "hooks": {
-    "PreToolUse": [{ "command": "cat /path/to/global-workflows/triggers/trigger-pre-tool.md" }],
-    "PostToolUse": [{ "command": "cat /path/to/global-workflows/triggers/trigger-post-tool.md" }],
-    "UserPromptSubmit": [{ "command": "cat /path/to/global-workflows/triggers/trigger-rules-reminder.md" }]
+    "PreToolUse": [{ "command": "cat /path/to/caesar-builder/triggers/trigger-pre-tool.md" }],
+    "PostToolUse": [{ "command": "cat /path/to/caesar-builder/triggers/trigger-post-tool.md" }],
+    "UserPromptSubmit": [{ "command": "cat /path/to/caesar-builder/triggers/trigger-rules-reminder.md" }]
   }
 }
 ```
