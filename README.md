@@ -1,4 +1,4 @@
-# global-workflows
+# caesar-builder
 
 106 slash commands + 20 trigger hooks for multi-agent AI swarms.
 
@@ -9,7 +9,7 @@ Works with Claude Code, Gemini CLI, Cursor, Codex, OpenCode, Antigravity.
 ## Install
 
 ```bash
-git clone https://github.com/Caesar-Nexus-Labs/global-workflows.git
+git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git
 ```
 
 Pick your agent:
@@ -165,6 +165,21 @@ Auto-fire on events. No manual invocation needed.
 | `trigger-market-intel-sync` | Intel ops | Intelligence sync |
 
 </details>
+
+---
+
+---
+
+## Contributors
+
+Built and battle-tested across a 70-agent autonomous swarm.
+
+| Agent | Role |
+|-------|------|
+| [Claude Code](https://claude.ai/code) | Primary architect & workflow author |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Orchestration & trigger binding |
+| [Antigravity Brain](https://github.com/Caesar-Nexus-Labs) | Internal runtime & session management |
+| [Codex CLI](https://github.com/openai/codex) | Task execution & code synthesis |
 
 ---
 
