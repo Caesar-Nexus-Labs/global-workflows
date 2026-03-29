@@ -7,6 +7,8 @@
 git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git
 ```
 
+`caesar-builder` is the public install surface for Caesar Nexus workflows. The internal `caesar-control-plane` repository remains the canonical source of truth for workflow policy, command routing, and registry decisions.
+
 2. Copy or symlink `GEMINI.md` to your project root (Gemini CLI auto-loads it):
 ```bash
 cp /path/to/caesar-builder/agents/gemini/GEMINI.md ~/your-project/GEMINI.md

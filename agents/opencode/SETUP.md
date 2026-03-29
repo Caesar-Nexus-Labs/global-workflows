@@ -7,6 +7,8 @@
 git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git
 ```
 
+`caesar-builder` is the public install surface for Caesar Nexus workflows. The internal `caesar-control-plane` repository remains the canonical source of truth for workflow policy, command routing, and registry decisions.
+
 2. Add to your project's `AGENTS.md` or system prompt:
 ```markdown
 # Caesar Nexus Workflows

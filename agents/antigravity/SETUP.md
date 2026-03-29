@@ -7,6 +7,8 @@ This is the native environment. Workflows are already loaded via:
 - Triggers: bound in `~/.gemini/settings.json`
 - GEMINI.md: auto-loaded at session start
 
+This repo remains the distribution bundle for the native environment. The internal `caesar-control-plane` repository remains the canonical source of truth for workflow governance, command routing, and registry decisions.
+
 ## For fresh installs
 
 1. Clone:

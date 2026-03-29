@@ -29,6 +29,12 @@ If a workflow depends on private runtime, private skills, or internal storage, t
 git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git
 ```
 
+## Repository Role
+
+`caesar-builder` is the public onboarding and distribution surface for Caesar Nexus workflows.
+
+The internal `caesar-control-plane` repository remains the canonical source of truth for workflow governance, command routing, registry decisions, and control-plane policy. Use this repo to install and consume the bundle; if public onboarding text here ever drifts from internal control-plane policy, trust the control-plane repository first.
+
 Read in this order:
 1. this `README.md`
 2. [agents/README.md](agents/README.md)
