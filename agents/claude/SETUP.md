@@ -28,7 +28,7 @@ Use /forge, /forge-plan, /ops-deploy, etc. as described in each .md file.
 ```
 
 ## Commands available
-See [commands/](../../commands/) — 106 slash commands across 6 kits.
+See [commands/](../../commands/) — 105 slash commands across 6 kits.
 
 ## Triggers available
 See [triggers/](../../triggers/) — 20 lifecycle hooks.

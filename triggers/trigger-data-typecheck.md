@@ -3,12 +3,11 @@ name: trigger-data-typecheck
 description: High-fidelity TypeScript type checking for changed files (RE-ENGINEERED).
 event: trigger-post-tool
 matcher: ".*\\.ts$|.*\\.tsx$"
-logic_source: claudekit-hooks typecheck-changed
 ---
 
 # Trigger: Data TypeCheck (`trigger-data-typecheck`)
 
-## 1. Description (Ruột Claudekit)
+## 1. Description
 This trigger enforces strict TypeScript type checking immediately after a tool modifies `.ts` or `.tsx` files. It prevents the introduction of type errors into the codebase by running incremental compilation.
 
 ## 2. Execution Logic

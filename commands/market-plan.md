@@ -6,7 +6,8 @@
 
 - **Slug**: /market-plan
 - **Type**: Strategy
-- **Agents**: Marketing Strategist, Product Manager, Growth Lead
+- **Conductor Persona**: Growth Product Lead
+- **Supporting Collaborators**: Product Marketer, Growth Hacker
 - **Duration**: 4-8 hours
 - **Output**: Quarterly marketing strategy document
 
@@ -20,6 +21,13 @@ Develops comprehensive quarterly marketing strategy including:
 - Competitive positioning
 - Growth initiatives & experiments
 - Team allocation & dependencies
+
+## Skill Routing
+
+- **Agent ID**: `agent.growth_product_lead`
+- **Process Hub**: `cn:c15_plan`
+- **Primary Workflow**: `cn:c70_product_manager`
+- **Supporting Workflow**: `cn:c70_marketing_ideas`
 
 ## Parameters
 

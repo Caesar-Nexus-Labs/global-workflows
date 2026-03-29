@@ -18,4 +18,4 @@ Triggers (quality gates): /path/to/caesar-builder/triggers/
 3. Reference specific commands in Cursor chat by pasting the command content or pointing to the file path.
 
 ## Commands available
-See [commands/](../../commands/) — 106 slash commands across 6 kits.
+See [commands/](../../commands/) — 105 slash commands across 6 kits.

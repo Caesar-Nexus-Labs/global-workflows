@@ -27,7 +27,7 @@ ln -s /path/to/caesar-builder/agents/gemini/GEMINI.md ~/your-project/GEMINI.md
 ```
 
 ## Commands available
-See [commands/](../../commands/) — 106 slash commands across 6 kits.
+See [commands/](../../commands/) — 105 slash commands across 6 kits.
 
 ## Triggers available
 See [triggers/](../../triggers/) — 20 lifecycle hooks.

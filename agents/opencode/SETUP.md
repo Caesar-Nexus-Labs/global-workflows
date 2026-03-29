@@ -17,4 +17,4 @@ Triggers: /path/to/caesar-builder/triggers/
 3. Reference commands directly in your OpenCode sessions.
 
 ## Commands available
-See [commands/](../../commands/) — 106 slash commands across 6 kits.
+See [commands/](../../commands/) — 105 slash commands across 6 kits.

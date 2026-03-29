@@ -3,7 +3,7 @@ name: trigger-rust-verify
 description: High-fidelity Rust verification (cargo check + sccache).
 event: trigger-post-tool
 matcher: ".*\\.rs$"
-logic_source: claudekit-hooks typecheck-changed (RE-ENGINEERED for RUST)
+logic_source: Caesar Nexus Logic (RE-ENGINEERED for RUST)
 ---
 
 # Trigger: Rust Verify (`trigger-rust-verify`)

@@ -9,7 +9,8 @@
 | **Slug** | `/ops-deploy` |
 | **Kit** | DevOps (`/ops-*`) |
 | **Type** | Orchestrator (main entry point) |
-| **Conductor Agents** | DevOps Engineer, Infrastructure Architect, Release Manager |
+| **Conductor Persona** | Caesar Ops Manager |
+| **Supporting Collaborators** | Infrastructure Architect, Deployment Validator |
 | **Prerequisites** | `/nexus-validate-infra` MUST pass |
 | **Triggers** | `trigger-prompt-submit`, `trigger-post-tool`, `trigger-session-end` |
 | **Estimated Duration** | 15-30 minutes (depending on infrastructure size) |
@@ -30,6 +31,18 @@
 8. **Observability Setup** (`/ops-monitoring`) → Configure telemetry and alerting
 
 Each step must succeed before proceeding to the next. Any failure triggers automatic rollback.
+
+---
+
+## Skill Routing
+
+- **Agent ID**: `agent.ops_manager`
+- **Process Hub**: `cn:c15_plan`
+- **Primary Workflow Bundle**: `cn:c70_cloud_devops`
+- **Supporting Workflows**:
+  - `cn:c60_terraform_infrastructure`
+  - `cn:c70_kubernetes_deployment`
+  - `cn:c70_deployment_validation_config_validate`
 
 ---
 

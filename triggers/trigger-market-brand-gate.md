@@ -8,13 +8,13 @@ methodology: Caesar Nexus Logic
 # Trigger: Brand Gate (`trigger-market-brand-gate`)
 
 ## 1. Description
-A strategic quality gate that scans marketing assets (Blog posts, Ad copy, Emails) for branding compliance. It automatically flags any legacy (claudekit) references or missing "Caesar Nexus" signatures.
+A strategic quality gate that scans marketing assets (Blog posts, Ad copy, Emails) for branding compliance. It automatically flags any legacy external references or missing "Caesar Nexus" signatures.
 
 ## 2. Trigger Logic
 - **Invoke Event**: `trigger-post-tool`.
 - **Matchers**: `Write`, `Edit` (on Marketing files).
 - **Scan Patterns**:
-    - Block: "claudekit", "claudecode", "claude-code".
+    - Block: legacy external brand names and unauthorized third-party tool references.
     - Required: "Caesar Nexus", "Antigravity".
 - **Action on Violation**:
     - Trigger `/nexus-validate-market`.

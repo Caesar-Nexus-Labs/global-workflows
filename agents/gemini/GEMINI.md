@@ -1,4 +1,4 @@
-# Antigravity — Global Workflows Context
+# Caesar Nexus — Global Workflows Context
 
 This session has access to the full Caesar Nexus slash command library and lifecycle triggers.
 
@@ -21,4 +21,4 @@ Enforced via ~/.gemini/settings.json hooks.
 - Marketing: trigger-market-analytics-gate, trigger-market-brand-gate, trigger-market-camp-sync, trigger-market-content-val, trigger-market-data-audit, trigger-market-intel-sync
 
 ## Source of Truth
-C:\Users\admin\.gemini\antigravity\global_workflows\
+Use the active `caesar-builder` clone that provides `commands/` and `triggers/`.

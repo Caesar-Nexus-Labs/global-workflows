@@ -1,16 +1,39 @@
 # caesar-builder
 
-106 slash commands + 20 trigger hooks for multi-agent AI swarms.
+Public command surface for Caesar Nexus: `105` slash commands, `20` lifecycle triggers, and per-agent setup guides.
 
-Works with Claude Code, Gemini CLI, Cursor, Codex, OpenCode, Antigravity.
+## What This Repository Is
 
----
+This repository is the public orchestration layer only:
+- `commands/` defines the slash-command surface
+- `triggers/` defines lifecycle gates
+- `agents/` explains how supported clients load the surface
 
-## Install
+Treat this repository as the public contract for how Caesar clients discover and invoke workflows.
+
+## What This Repository Is Not
+
+This repository intentionally does **not** include:
+- private runtime state
+- internal ledgers or operator journals
+- private skill bundles
+- private persona registries
+- internal adapter payloads
+- workspace-state or deployment output
+
+If a workflow depends on private runtime, private skills, or internal storage, that dependency must remain conceptual in this public surface. This repository must stay readable and safe on its own.
+
+## Quick Start
 
 ```bash
 git clone https://github.com/Caesar-Nexus-Labs/caesar-builder.git
 ```
+
+Read in this order:
+1. this `README.md`
+2. [agents/README.md](agents/README.md)
+3. the setup guide for your client
+4. the specific file under [commands/](commands/) or [triggers/](triggers/) you plan to use
 
 Pick your agent:
 
@@ -23,17 +46,35 @@ Pick your agent:
 | OpenCode | [agents/opencode/SETUP.md](agents/opencode/SETUP.md) |
 | Antigravity | [agents/antigravity/SETUP.md](agents/antigravity/SETUP.md) |
 
----
-
 ## Structure
 
-```
-commands/     106 slash commands
+```text
+commands/     105 slash commands
 triggers/     20 lifecycle hooks
 agents/       per-agent setup guides
 ```
 
----
+## Repository Contract
+
+These counts are canonical for the current public release:
+- `105` command files in `commands/`
+- `20` trigger files in `triggers/`
+- supported client setup surfaces under `agents/`
+
+If a README, setup guide, or command description claims a different count, the files on disk win. Public-facing docs should never invent commands that do not exist as files in this repository.
+
+## Identifier Discipline
+
+Public updates must preserve repository identifiers exactly as they exist on disk:
+- command files keep their current slash-command identity
+- trigger files keep their current trigger identity
+- agent setup files must reference commands and triggers without renaming them
+
+Do not publish documentation that:
+- renames an existing command or trigger in prose
+- introduces aliases that do not exist as files
+- points to private absolute paths, private repo names, or internal runtime-only storage
+- copies internal-only operating notes into this public repository
 
 ## Command Kits
 
@@ -43,22 +84,22 @@ agents/       per-agent setup guides
 | Command | Purpose |
 |---------|---------|
 | `/forge` | Primary dev orchestration |
-| `/forge-plan` | Implementation blueprint (plan only) |
-| `/forge-brainstorm` | Innovation & problem solving (plan only) |
+| `/forge-plan` | Implementation blueprint |
+| `/forge-brainstorm` | Read-only strategic ideation |
 | `/forge-execute-plan` | Execute pre-written plans |
-| `/forge-bootstrap` | Launch feature from zero |
+| `/forge-bootstrap` | Launch a new project or major feature |
 | `/forge-debug` | Forensic root cause analysis |
-| `/forge-review` | Quality & security audit |
-| `/forge-test` | TDD execution & verification |
+| `/forge-review` | Parallel quality and security audit |
+| `/forge-test` | Verification and TDD enforcement |
 | `/forge-refactor` | Optimization without side-effects |
 | `/forge-clean` | Dead code removal |
-| `/forge-git` | Semantic commits & branching |
+| `/forge-git` | Semantic commits and branching |
 | `/forge-docs` | Documentation management |
 | `/forge-research` | Technical scouting |
 | `/forge-mcp-builder` | MCP server scaffolding |
-| `/forge-ui-ux` | Premium design & UX |
+| `/forge-ui-ux` | Premium design and UX orchestration |
 | `/forge-scout` | Codebase analysis |
-| `/forge-finish-branch` | Branch review & merge |
+| `/forge-finish-branch` | Branch review and merge |
 | `/forge-port-feature` | Feature porting across codebases |
 | `/forge-journal` | Decision logging |
 | `/forge-watzup` | Project status report |
@@ -132,8 +173,6 @@ agents/       per-agent setup guides
 
 </details>
 
----
-
 ## Trigger Gates
 
 Auto-fire on events. No manual invocation needed.
@@ -146,10 +185,10 @@ Auto-fire on events. No manual invocation needed.
 | `trigger-pre-tool` | Before tool call | Security gate |
 | `trigger-post-tool` | After execution | Verification |
 | `trigger-session-start` | Session init | Environment setup |
-| `trigger-session-end` | Session close | Cleanup & logging |
+| `trigger-session-end` | Session close | Cleanup and logging |
 | `trigger-prompt-submit` | Each prompt | Inject constraints |
 | `trigger-rules-reminder` | Each prompt | Rules enforcement |
-| `trigger-rust-verify` | `.rs` save | Compile + test gate |
+| `trigger-rust-verify` | `.rs` save | Compile and test gate |
 | `trigger-lint` | File save | Lint gate |
 | `trigger-verify-before-done` | Task completion | Block without evidence |
 | `trigger-data-typecheck` | Data ops | Type validation |
@@ -166,21 +205,36 @@ Auto-fire on events. No manual invocation needed.
 
 </details>
 
----
+## Repository Boundary
 
----
+Use this repository when you need:
+- a public slash-command surface
+- trigger definitions and wording
+- setup guides for supported agent clients
+
+Do not treat this repository as:
+- the full Caesar control plane
+- the runtime implementation
+- a workspace-state store
+- a private skills or persona registry
+
+## Release Discipline
+
+For public updates in this repository:
+- preserve command and trigger identifiers exactly as filenames
+- keep public docs repo-local and public-safe
+- do not leak internal absolute paths, private repo names, or operator-only storage conventions
+- prefer explicit boundary notes over ambiguous references to private infrastructure
 
 ## Contributors
 
-Built and battle-tested across a 70-agent autonomous swarm.
+Built and battle-tested across a multi-agent Caesar workflow stack.
 
 | Agent | Role |
 |-------|------|
-| [Claude Code](https://claude.ai/code) | Primary architect & workflow author |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Orchestration & trigger binding |
-| [Antigravity Brain](https://github.com/Caesar-Nexus-Labs) | Internal runtime & session management |
-| [Codex CLI](https://github.com/openai/codex) | Task execution & code synthesis |
-
----
+| [Claude Code](https://claude.ai/code) | Primary architect and workflow author |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Orchestration and trigger binding |
+| [Antigravity Brain](https://github.com/Caesar-Nexus-Labs) | Internal runtime and session management |
+| [Codex CLI](https://github.com/openai/codex) | Task execution and code synthesis |
 
 *Part of [Caesar Nexus Labs](https://github.com/Caesar-Nexus-Labs)*

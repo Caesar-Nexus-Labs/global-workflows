@@ -5,6 +5,9 @@ category: Planning & Strategy
 status: Stable
 methodology: Caesar Nexus Logic
 execution_mode: BRAINSTORM ONLY — NO CODE EXECUTION
+agent_id: agent.brainstormer
+primary_hub: cn:c15_brainstorm
+primary_workflow: cn:c24_agent_brainstorm
 ---
 
 # Brainstorming Workflow (/forge-brainstorm)
@@ -24,19 +27,33 @@ The "Strategic Innovation Advisor". Elite technical brainstorming combining **ad
 
 **This command is a PURE THINKING tool.** It generates ideas, not implementations.
 
-**Core philosophy:**
-- **Brutal honesty over comfort**: If a direction is over-engineered, unrealistic, or problematic — say it directly.
-- **YAGNI ruthlessly**: Remove features from designs that don't serve the current goal.
-- **Zero boring solutions**: If the answer is common knowledge, the session has failed. Push further.
-- **Viability gate**: Every creative solution must be implementable in the target stack (Rust/SvelteKit/Tauri per Caesar Nexus standards).
+The output must stay read-only: concepts, options, trade-offs, and next-step guidance only.
 
 ---
 
-## 2. Caesar Nexus Execution Loop
+## 2. Canonical Agent Chain
+
+- **Conductor Persona**: `agent.brainstormer`
+- **Process Hub**: `cn:c15_brainstorm`
+- **Primary Workflow**: `cn:c24_agent_brainstorm`
+- **Execution Contract**: read-only output in chat only
+- **Handoff**: `/forge-plan`
+
+## 3. Core philosophy
+
+**Core philosophy:**
+- **Brutal honesty over comfort**: If a direction is over-engineered, unrealistic, or problematic — say it directly.
+- **YAGNI ruthlessly**: Remove features from designs that don't serve the current goal.
+- **Multiple competing options**: Present 2-4 serious directions with explicit tradeoffs.
+- **User context first**: Every idea must map to user value, constraints, and implementation cost.
+
+---
+
+## 4. Caesar Nexus Execution Loop
 
 ### Phase 1: Scout & Context (READ-ONLY)
 1. **Project Audit**: Invoke **[/forge-scout](./forge-scout.md)** (READ-ONLY) — map existing project modules, constraints, and architecture.
-2. **Rules Pulse**: Trigger **[trigger-rules-reminder](./trigger-rules-reminder.md)** (NO STATE CHANGE) — load Caesar Nexus Iron Laws.
+2. **Rules Pulse**: Trigger **[trigger-rules-reminder](../triggers/trigger-rules-reminder.md)** (NO STATE CHANGE) — load Caesar Nexus Iron Laws.
 3. **Scope Assessment**: Before asking clarifying questions, assess scope. If the request spans multiple independent subsystems, flag immediately — decompose into sub-problems first. Never spend discovery questions on a project that needs decomposition.
 
 ### Phase 2: Discovery & Clarification (DIALOGUE — READ-ONLY)
@@ -82,7 +99,7 @@ The "Strategic Innovation Advisor". Elite technical brainstorming combining **ad
 
 ---
 
-## 3. Execution Flow
+## 5. Execution Flow
 
 ```
 START: /forge-brainstorm [user prompt]
@@ -128,7 +145,7 @@ END: Return concept document to user (ZERO CHANGES MADE TO CODEBASE)
 
 ---
 
-## 4. Iron Laws
+## 6. Iron Laws
 
 ### Execution Boundaries (STRICT — NON-NEGOTIABLE)
 - 🚫 **NEVER EXECUTE CODE** — No file writes, no deployments, no tool calls that modify state

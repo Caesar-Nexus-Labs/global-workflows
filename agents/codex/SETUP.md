@@ -21,4 +21,4 @@ codex --full-auto "Follow forge-debug.md to investigate this issue"
 ```
 
 ## Commands available
-See [commands/](../../commands/) — 106 slash commands across 6 kits.
+See [commands/](../../commands/) — 105 slash commands across 6 kits.

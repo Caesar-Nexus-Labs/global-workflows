@@ -2,12 +2,11 @@
 name: trigger-market-camp-sync
 description: Multi-channel synchronization and coordination trigger.
 event: trigger-subagent-stop
-logic_source: claudekit-mkt Campaign Coordination
 ---
 
 # Trigger: Campaign Sync (`trigger-market-camp-sync`)
 
-## 1. Description (Ruột Claudekit Strategy)
+## 1. Description
 Synchronizes progress between content production, email automation, and ad management during a multi-channel campaign launch. It ensures all "Vệ tinh" (satellites) are aligned before the final "Go-Live" signal.
 
 ## 2. Execution Logic

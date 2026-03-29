@@ -3,12 +3,11 @@ name: trigger-market-analytics-gate
 description: Data integrity verification before marketing performance analysis.
 event: trigger-pre-tool
 matcher: "/market-data-analytics"
-logic_source: claudekit-mkt Analytics Pre-Send
 ---
 
 # Trigger: Marketing Analytics Gate (`trigger-market-analytics-gate`)
 
-## 1. Description (Ruột Claudekit Strategy)
+## 1. Description
 Ensures that all marketing data is clean, synchronized, and follows the required schema before any ROI or performance calculation. It prevents "Dirty Data" from polluting strategic decisions.
 
 ## 2. Execution Logic
